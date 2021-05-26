@@ -43,3 +43,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
+
+# Parse CSS and add vendor prefixes to CSS rules using values from the Can I Use website.
+gem 'autoprefixer-rails'
+# Icons to be used on our html
+gem 'font-awesome-sass', '~> 5.6.1'
+# Do any form is way way easier 
+gem 'simple_form'
