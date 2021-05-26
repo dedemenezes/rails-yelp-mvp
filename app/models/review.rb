@@ -5,6 +5,14 @@ class Review < ApplicationRecord
   belongs_to :restaurant
 
   validates :content, presence: true
-  validates :rating, inclusion: { in: RATING, message: "%{value} needs to be between 1 and 5"}, numericality: { only_integer: true }
+
+  validates :rating, 
+  inclusion: { 
+    in: RATING, 
+    message: "%{value} needs to be between 1 and 5"
+    }, 
+  numericality: { 
+      only_integer: true 
+  }
 
 end
