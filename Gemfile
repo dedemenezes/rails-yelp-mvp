@@ -50,3 +50,6 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 # Do any form is way way easier 
 gem 'simple_form'
+
+# Fake database info
+gem 'faker', '~> 2.18'
