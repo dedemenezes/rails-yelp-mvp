@@ -2,14 +2,19 @@
 <h2>You can find us at <%= @restaurant.address %> to enjoy some <%= @restaurant.category %> cuisine.</h2>
 
 <h3>Make your reservation now!</h3>
-<h3><%= @restaurant.phone_number %></h3>
+<p>
+  <i class="fas fa-phone"></i>
+  <%= @restaurant.phone_number %>
+</p>
 
 <h4>Reviews</h4>
-<p>
-  <% @restaurant.reviews.each do |review| %>
-    <%= review.content %>
-  <% end %>
-</p>
+  <ul class="list-group">
+    <% @restaurant.reviews.each do |review| %>
+      <li class="list-group-item">
+      <p>Rating: <%= review.rating %></p>
+      <p><%= review.content %></li class="list-group-item"></p>
+    <% end %>
+  </ul>
 
 <%= render 'reviews/review_form' %>
 
