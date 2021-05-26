@@ -3,7 +3,12 @@
 <h3>Perfect place to drink until it raises again.</h3>
 
 <% @restaurants.each do |restaurant| %>
-  <p><%= restaurant.name %></p>
+  <p>
+    <%= link_to restaurant_path(restaurant) do %> <!-- no need to write restaurant.id RAILS MAGIC in play -->
+      <%= restaurant.name %>
+    <% end %>
+    
+  </p>
 <% end %>
 
 <%= link_to "New restaurant", new_restaurant_path, class: "btn btn-success" %>
