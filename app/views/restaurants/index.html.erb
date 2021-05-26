@@ -1,5 +1,9 @@
-<h1>Welcome to</h1>
+<h1>Welcome to Cryptos Dinner</h1>
+
+<h3>Perfect place to drink until it raises again.</h3>
 
 <% @restaurants.each do |restaurant| %>
-  <p><%= restaurant.address %></p>
+  <p><%= restaurant.name %></p>
 <% end %>
+
+<%= link_to "New restaurant", new_restaurant_path, class: "btn btn-success" %>
